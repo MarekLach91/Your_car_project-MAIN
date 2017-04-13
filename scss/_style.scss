@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+}
+
+$columns: 12;
+@media (min-width: 660px) {
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+            width: 100%/$columns* $i;
+            //      border: 1px solid red;
+            height: 100%;
+            float: left;
+        }
+    }
+}
+
+.clearfix {
+    clear: both;
+}
+
+.grid-container {
+    width: 90vw;
+    min-width: 350px;
+    height: 100%;
+    //    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.list {
+    display: none;
+}
+
+.list .show {
+    display: block;
+    float: right;
+}
+
+@media (min-width: 480px) {
+    .list {
+        display: block;
+    }
+    .list li {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 480px) {
+    .show-hide-menu {
+        display: none;
+        right: 0;
+    }
+    //    positoin {
+    //        display: flex;
+    //        right: 0;
+    //        justify-content: center;
+    //        align-items: center;
+    //        
+    //    }
+}
+
+#rudy {
+    background-image: url(../images/logo-top.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.right_top {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
+    font-size: 1.5em;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#rudy .botton-logo .cars .carlink {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carlink {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.menu-top:hover {
+    text-decoration: underline;
+    background-color: lightblue;
+    border-radius: 100px;
+}
+
+nav {
+    background-color: #CBC6C3;
+    height: 110px;
+}
+
+@media (min-width: 480px) {
+    header {
+        background-image: url(../images/mountain-road-1556177_1920.png);
+        height: 600px;
+        opacity: 0.5;
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+    }
+}
+
+h2 {
+    //    flexbox
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5em;
+    font-style: italic;
+    height: 100%
+}
+
+#one {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: lightblue;
+}
+
+#carwalcome {}
+
+#allcars {
+    height: auto;
+    width: auto;
+}
+
+.cars {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border: 10px solid lightblue;
+    //    width: 350px;
+    background-color: white;
+    //    
+    //    
+}
+
+.cars:hover {
+    background-color: #CBC6C3;
+    opacity: 0.6;
+}
+
+#nr1 {
+    background-image: url(../images/fiat-500-622-0.png);
+}
+
+#nr2 {
+    background-image: url(../images/toyota-yaris-9820.png);
+}
+
+#nr3 {
+    background-image: url(../images/ford-focus-titanium-1232-0.png);
+}
+
+#nr4 {
+    background-image: url(../images/opel-astra-station-wagon-4700-0.png);
+}
+
+#nr5 {
+    background-image: url(../images/ford-fusion-1441-0.png);
+}
+
+#nr6 {
+    background-image: url(../images/volkswagen-passat-6031-0.png);
+}
+
+#nr7 {
+    background-image: url(../images/volvo-xc70-7194-0.png);
+}
+
+#nr8 {
+    background-image: url(../images/yellow-audi-s4-541-0.png);
+}
+
+#nr9 {
+    background-image: url(../images/kia-sportage-8084-0.png);
+}
+
+#nr10 {
+    background-image: url(../images/lexus-nx300h-1654-0.png);
+}
+
+#nr11 {
+    background-image: url(../images/bmw-sedan-8667-0.png);
+}
+
+#nr12 {
+    background-image: url(../images/new-mercedes-benz-s-class-7239-0.png);
+}
+
+#two {
+    background-color: dodgerblue;
+    height: auto;
+    min-height: 800px;
+}
+
+.sec-two-top {
+    height: 100px;
+}
+
+h4 {
+    padding: 10px;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+}
+
+h3 {
+    padding: 10px;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    letter-spacing: 1ex;
+    font-weight: bold;
+}
+
+.sec-two {
+    height: 600px;
+}
+
+form {
+    width: 100%;
+}
+
+#leftform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    //    height: 100%;
+    //    width: 100%;
+}
+
+.demo-icon {
+    font-size: 2.6em;
+    float: right;
+    border-right: 2px;
+}
+
+@media (min-width: 700px) and (max-width: 840px) {
+    .hideicons {
+        display: none;
+    }
+}
+
+.searchcar {
+    background-color: #CBC6C3;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 6px;
+    min-height: 70px;
+    height: auto;
+}
+
+//label {
+//    width: 100%;
+//}
+
+#show_prcie {
+    background-color: white;
+    color: black;
+}
+
+.searchcar p {
+    font-size: 1.3em;
+    padding: 2px 0 2px 0;
+//    display: inline;
+    
+    span {
+        display: inline-block;
+        color: black;
+        font-size: 1.5em;
+        border: 2px dotted black;
+        background-color: white;
+        
+    }
+}
+
+.send {
+    margin-top: 10px;
+    float: right;
+    background-color: darkblue;
+    color: white;
+    border-radius: 100px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.choice {
+    width: 150px;
+    height: 45px;
+    background: white;
+    font-size: 20px;
+}
+
+h5 {
+    margin: 0;
+    background: #CBC6C3;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5em;
+    min-height: 81px;
+    height: auto;
+}
+
+.expand {
+    color: green;
+    float: right;
+}
+
+.hide-a {
+    display: none;
+    float: right;
+}
+
+.container {
+    height: 101px;
+    padding: 25px;
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+    background-color: white;
+    color: black;
+}
+
+.close {
+    color: green;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+#textplace {
+    width: 80%;
+    height: 60px;
+    
+}
+
+.sec-two-botton {
+    height: 100px;
+}
+
+#price {
+    color: black;
+    background-color: white;
+    width: 300px;
+    display: flex;
+}
+
+footer {
+    background-color: darkblue;
+    height: 100px;
+}
+
+.botton-logo {
+    background-image: url(../images/logo-bottom.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+span {
+    padding: 4px;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.list2 {
+    padding: 4px;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+        font-size: 1em;
+    }
+}
