@@ -95,9 +95,21 @@ a {
 }
 
 .menu-top:hover {
-    text-decoration: underline;
+    text-decoration: none;
     background-color: lightblue;
     border-radius: 100px;
+}
+
+
+.icon-menu {
+    color: white;
+}
+
+.icon-menu:hover {
+    color: dodgerblue;
+    font-weight: bold;
+    border-radius: 100px;
+    border: 2px dotted white;
 }
 
 nav {
@@ -136,6 +148,8 @@ h2 {
     font-size: 5em;
     font-style: italic;
     height: 100%;
+    width: 100%;
+    
 }
 
 //section one
@@ -171,6 +185,8 @@ h2 {
 .cars:hover {
     background-color: #CBC6C3;
     opacity: 0.6;
+    background-size: cover;
+    border: 2px solid blue;
 }
 
 #nr1 {
@@ -369,6 +385,7 @@ h5 {
 
 .add {
     display: inline-block;
+    padding: 7px;
 }
 
 @media (max-width: 1300px) {
