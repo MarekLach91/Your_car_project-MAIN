@@ -7,28 +7,26 @@ $columns: 12;
     @for $i from 1 through $columns {
         .col-#{$i} {
             width: 100%/$columns* $i;
-            //      border: 1px solid red;
             height: 100%;
             float: left;
         }
     }
 }
 
-
-
 .grid-container {
     width: 90vw;
-    min-width: 350px;
     height: 100%;
-    //    border: 1px solid black;
     margin: 0 auto;
+    padding: 0 10px 0 10px;
 }
 
 // top section
-
-@media (max-width: 780px) {
+@media (max-width: 885px) {
     .list {
         display: none;
+    }
+    .grid-container h2 {
+        font-size: 3em;
     }
 }
 
@@ -38,7 +36,6 @@ $columns: 12;
 
 .list li {
     display: inline-block;
-    
 }
 
 li {
@@ -52,7 +49,7 @@ a {
     color: white;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 886px) {
     .show-hide-menu {
         display: none;
         ;
@@ -100,7 +97,6 @@ a {
     border-radius: 100px;
 }
 
-
 .icon-menu {
     color: white;
 }
@@ -128,7 +124,7 @@ nav {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     header {
         background-image: url(../images/hidelogo.png);
         background-size: contain;
@@ -145,25 +141,22 @@ h2 {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 5em;
+    font-size: 4.8em;
     font-style: italic;
     height: 100%;
     width: 100%;
-    
 }
 
 //section one
-
 #one {
     box-sizing: border-box;
     height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: lightblue;
+    background-color: #add8e6;
 }
 
-#carwalcome {}
 
 #allcars {
     height: auto;
@@ -175,11 +168,8 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     height: 220px;
-    border: 10px solid
-        
-    lightblue;
+    border: 10px solid lightblue;
     background-color: white;
-    
 }
 
 .cars:hover {
@@ -237,9 +227,7 @@ h2 {
     background-image: url(../images/new-mercedes-benz-s-class-7239-0.png);
 }
 
-
 //section two
-
 #two {
     background-color: dodgerblue;
     height: auto;
@@ -272,7 +260,7 @@ h4 {
     height: 100%;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 659px) {
     #hide-opt {
         display: none;
     }
@@ -295,19 +283,22 @@ form {
     //    width: 100%;
 }
 
+@media (max-width: 415px) {
+    .hideicons,
+    .icon-cab,
+    .icon-wallet,
+    .icon-location-inv {
+        display: none;
+    }
+}
+
 .demo-icon {
     font-size: 2.6em;
     float: right;
     border-right: 2px;
 }
 
-@media (max-width: 390px) {
-    .hideicons {
-        display: none;
-    }
-}
-
-@media (min-width: 655px) and (max-width: 800px) {
+@media (min-width: 655px) and (max-width: 810px) {
     .hideicons {
         display: none;
     }
@@ -322,7 +313,6 @@ form {
     min-height: 70px;
     height: auto;
 }
-
 
 #show_prcie {
     background-color: white;
@@ -383,6 +373,24 @@ h5 {
     height: auto;
 }
 
+@media (max-width: 355px) {
+    h5 {
+        font-size: 1.2em;
+    }
+    .send {
+        margin-top: -17px;
+    }
+    .add {
+        font-size: 0.7em;
+    }
+    footer {
+        font-size: 0.8em;
+    }
+    ul {
+        margin-top: 20px;
+    }
+}
+
 .add {
     display: inline-block;
     padding: 7px;
@@ -440,10 +448,9 @@ h5 {
 }
 
 // bottom section
-
 footer {
     background-color: darkblue;
-    height: 100px;
+    min-height: 100px;
 }
 
 .botton-logo {
