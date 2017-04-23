@@ -129,21 +129,8 @@ a {
         min-width: 320px;
         background-attachment: fixed;
     }
-}
-
-@media (max-width: 479px) {
-    header {
-        background-image: url(../images/hidelogo.png);
-        background-size: contain;
-        background-position: center;
-        width: 100vw;
-        background-repeat: no-repeat;
-        min-height: 250px;
-        font-size: 0;
-    }
-}
-
-h2 {
+    
+    h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,6 +140,26 @@ h2 {
     height: 100%;
     width: 100%;
 }
+
+}
+
+@media (max-width: 479px) {
+    header {
+        background-image: url(../images/hidelogo.png);
+        background-size: initial;
+        background-position: center top;
+        width: 100vw;
+        background-repeat: no-repeat;
+        height: 280px;
+        background-attachment: fixed;
+        background-position: 50% 100px;
+        
+    }
+    h2 {
+        display: none;
+    }
+}
+
 
 //section one
 #one {
@@ -177,10 +184,9 @@ h2 {
     height: 220px;
     border: 10px solid lightblue;
     background-color: white;
+    position: relative;
 }
-.cars::after {
-    background-color: red;
-}
+
 
 .cars:hover {
     background-color: #CBC6C3;
@@ -189,6 +195,29 @@ h2 {
     border: 2px solid blue;
     
     
+}
+
+.carmodel {
+
+    position: absolute;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 68px;
+    bottom: -8px;
+    padding: 15px 0 0 14px;
+}
+
+
+.carmodel::after {
+    display: block;
+    content: "";
+    background-color: #24ba9f;
+    width: 40%;
+    height: 7px;
+    margin-top: 1px;
 }
 
 #nr1 {
