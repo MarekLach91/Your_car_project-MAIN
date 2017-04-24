@@ -1,39 +1,50 @@
-document.addEventListener("DOMContentLoaded", function(){
+$(function(){
     
-    console.log('dom');
+    console.log('DOM!');
     
-   // hamburger menu
-    
-    var menu = document.getElementsByClassName('show-hide-menu');
-    console.log(menu);
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  // hiding description
-  var carsphoto = document.getElementsByClassName('cars')[0];
 
+    
+    
+    
 
-  function hide(){
-    var elementToHide = this.getElementsByClassName('carmodel')[0];
-    elementToHide.style.display = "none";
-  }
-
-  function show(){
-    var elementToHide = this.getElementsByClassName('carmodel')[0];
-    elementToHide.style.display = "block";
-  }
-
-  carsphoto.addEventListener("mouseover", hide);
-  carsphoto.addEventListener("mouseout", show);
+ var $menu = $('.show-hide-menu');
+  var $hidelist = $menu.find('.list');
+    
+     $menu.on('click', function(event){
+        console.log('działa');
+         $hidelist.slideDown();
+         
+     });
+    
+    
+    
+    
+    
+  
+  var $mainsec = $('.sec-two');
+    var $open = $mainsec.find('.expand');
+    $open.on('click', function(event){
+        event.preventDefault();
+        
+        var $this = $(this);
+        var $cont = $this.parent().next();
+        $cont.slideDown();
+        
+        
+        console.log($cont);
+    });
+    
+    var $close = $mainsec.find('.close');
+    $close.on('click', function(event){
+        event.preventDefault();
+        var $this = $(this);
+        $this.parent().slideUp();
+    });
+          
+    
+    
+    
     
 });
+
+
