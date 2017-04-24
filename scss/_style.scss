@@ -158,9 +158,10 @@ a {
         width: 100vw;
         background-repeat: no-repeat;
         height: 280px;
-        background-attachment: fixed !important;
+        background-attachment: fixed;
         background-position: 50% 100px;
         position: static;
+        z-index: -1;
         
     }
     
