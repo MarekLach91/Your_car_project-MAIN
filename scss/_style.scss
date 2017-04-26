@@ -48,7 +48,7 @@ nav {
     display: inline-block;
 }
 
-  li {
+li {
     padding: 10px;
     font-size: 1.5em;
     color: white;   
@@ -116,6 +116,7 @@ a {
 
 .icon-menu {
     color: white;
+    cursor: pointer;
 }
 
 .icon-menu:hover {
@@ -153,13 +154,13 @@ a {
 @media (max-width: 479px) {
     header {
         background-image: url(../images/hidelogo.png);
-//        background-size: inherit;
         background-position: center top;
         width: 100vw;
         background-repeat: no-repeat;
         height: 280px;
         background-attachment: fixed;
         background-position: 50% 100px;
+        -webkit-background-position: 50% 100px;
         position: static;
         z-index: -1;
         
@@ -201,15 +202,10 @@ a {
 .cars:hover {
     background-color: #CBC6C3;
     opacity: 0.6;
-    background-size: cover;
-//    border: 1px solid blue;
-    
-    
+    background-size: cover;   
 }
 
 .carmodel {
-
-    position: absolute;
     font-weight: bold;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -218,6 +214,7 @@ a {
     height: 68px;
     bottom: -8px;
     padding: 15px 0 0 14px;
+    z-index: -1;
 }
 
 
@@ -280,9 +277,16 @@ a {
 
 //section two
 #two {
-    background-color: dodgerblue;
-    height: auto;
-    min-height: 800px;
+background: rgba(73,155,234,1);
+background: -moz-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 55%, rgba(32,124,229,1) 73%, rgba(32,124,229,1) 81%, rgba(32,124,229,1) 84%, rgba(32,124,229,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(55%, rgba(73,155,234,1)), color-stop(73%, rgba(32,124,229,1)), color-stop(81%, rgba(32,124,229,1)), color-stop(84%, rgba(32,124,229,1)), color-stop(100%, rgba(32,124,229,1)));
+background: -webkit-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 55%, rgba(32,124,229,1) 73%, rgba(32,124,229,1) 81%, rgba(32,124,229,1) 84%, rgba(32,124,229,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 55%, rgba(32,124,229,1) 73%, rgba(32,124,229,1) 81%, rgba(32,124,229,1) 84%, rgba(32,124,229,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 55%, rgba(32,124,229,1) 73%, rgba(32,124,229,1) 81%, rgba(32,124,229,1) 84%, rgba(32,124,229,1) 100%);
+background: linear-gradient(135deg, rgba(73,155,234,1) 0%, rgba(73,155,234,1) 55%, rgba(32,124,229,1) 73%, rgba(32,124,229,1) 81%, rgba(32,124,229,1) 84%, rgba(32,124,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+height: auto;
+ min-height: 800px;
 }
 
 .sec-two-top {
@@ -349,7 +353,7 @@ form {
     border-right: 2px;
 }
 
-@media (min-width: 655px) and (max-width: 810px) {
+@media (min-width: 690px) and (max-width: 810px) {
     .hideicons {
         display: none;
     }
@@ -382,6 +386,34 @@ form {
         background-color: white;
     }
 }
+
+select:hover, input:hover  {
+    background: rgba(241,231,103,1);
+background: -moz-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,1)));
+background: -webkit-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+background: linear-gradient(135deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+    border: none;
+    webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+input {
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    line-height: 1.8em !important;
+}
+
+.ui-menu-item {
+    font-size: 0.9em;
+}
+
 
 .send {
     margin-top: 10px;
@@ -424,12 +456,9 @@ h5 {
     height: auto;
 }
 
-@media (max-width: 355px) {
+@media (max-width: 380px) {
     h5 {
         font-size: 1.2em;
-    }
-    .send {
-        margin-top: -17px;
     }
     .add {
         font-size: 0.7em;
@@ -510,13 +539,18 @@ footer {
     background-image: url(../images/logo-bottom.png);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
     width: 100%;
 }
+a {
+white-space: nowrap;
+}
 
-span {
+.col-3 span {
     padding-top: 8px;
     padding-left: 7px;
+    padding-right: 20px;
     color: white;
     height: 100%;
     display: flex;
@@ -535,5 +569,6 @@ span {
     
     li {
         font-size: 1em;
+        padding: 8px;
     }
 }

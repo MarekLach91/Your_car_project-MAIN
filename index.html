@@ -6,8 +6,11 @@
     <title>Your Car</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     <link rel="stylesheet" href="fontello/css/fontello.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> </head>
+    <link rel="stylesheet" href="css/jquery.timepicker.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
+</head>
 
 <body>
     <!--   top section-->
@@ -113,14 +116,14 @@
                         <div class="searchcar">
                             <label for="date-out">
                                 <p>Collection time:</p>
-                                <input class="choice" type="date" name="date-out">
-                                <input class="choice-time" type="time"><i class="hideicons demo-icon icon-calendar-check-o"></i></label>
+                                <input class="choice" type="text" name="date-out" value="dd/mm/yyyy">
+                                <input class="choice-time" type="text" value="hh:mm"><i class="hideicons demo-icon icon-calendar-check-o"></i></label>
                         </div>
                         <div class="searchcar">
                             <label for="date-out">
                                 <p>Drop-off time:</p>
-                                <input class="choice" type="date" name="date-out">
-                                <input class="choice-time" type="time"><i class=" hideicons demo-icon icon-calendar-times-o"></i> </label>
+                                <input class="choice" type="text" name="date-out" value="dd/mm/yyyy">
+                                <input class="choice-time" type="text" value="hh:mm"><i class=" hideicons demo-icon icon-calendar-times-o"></i> </label>
                         </div>
                         <div class="searchcar">
                             <p>Car:</p>
@@ -184,7 +187,7 @@
                     <a class="carlink" href="#"></a>
                 </div>
             </div>
-            <div class="col-3"><span>Your Car 2017 All rights reserved&emsp;&copy;&emsp;&reg;</span></div>
+            <div class="col-3"><span>Your Car - All rights reserved&emsp;&copy;&emsp;&reg;</span></div>
             <div class="col-6">
                 <ul class="list2">
                     <li><a href="#">About us.</a></li>
@@ -198,6 +201,8 @@
     </footer>
     <script src="./js/jquery-3.2.0.min.js"></script>
     <script src="./js/app.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
 </body>
 
 </html>
