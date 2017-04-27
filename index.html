@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     <link rel="stylesheet" href="fontello/css/fontello.css">
     <link rel="stylesheet" href="css/jquery.timepicker.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 </head>
 
 <body>
@@ -36,13 +36,15 @@
     <!--   main image-->
     <header>
         <div class="grid-container">
-            <h2>"We create Your way..."</h2> </div>
+            <h1>"We create Your way..."</h1>
+        </div>
     </header>
     <!--   section one-->
     <section id="one">
         <div class="grid-container">
             <div class="col-12" id="carwalcome">
-                <h3>Select the car for yourself:</h3></div>
+                <h3>Select the car for yourself:</h3>
+            </div>
             <div class="cars col-4" id="nr1">
                 <div class="carmodel">Fiat 500</div>
                 <a class="carlink" href="#"></a>
@@ -96,88 +98,111 @@
     <!--   section two-->
     <section id="two">
         <div class="grid-container sec-two-all">
-            <div class="col-6 sec-two-top">
-                <h4>Search and book a car:</h4></div>
-            <div class="col-6 sec-two-top" id="hide-opt">
-                <h4>Additional options:</h4></div>
-            <div class="col-6 sec-two">
-                <div id="leftform">
-                    <form action="client_car">
-                        <div class="searchcar">
-                            <p>Pickup location &amp; Dropoff:</p>
-                            <select class="choice" name="citys-out" size="1">
-                                <option>Warszawa</option>
-                                <option>Kraków</option>
-                                <option>Gdańsk</option>
-                                <option>Wrocław</option>
-                                <option>Poznań</option>
-                                <option>Katowice</option>
+            <form action="client_car" method="post">
+                <div class="col-6 sec-two-top">
+                    <h4>Search and book a car:</h4>
+                </div>
+                <div class="col-6 sec-two-top" id="hide-opt">
+                    <h4>Additional options:</h4>
+                </div>
+
+                <div class="col-6 sec-two">
+                    <div id="leftform">
+                        <div id="form">
+                            <div class="searchcar">
+                                <p>Pickup location &amp; Dropoff:</p>
+                                <select class="choice" name="citys-out" size="1">
+                                <option value="waw">Warszawa</option>
+                                <option value="krk">Kraków</option>
+                                <option value="gdn">Gdańsk</option>
+                                <option value="wro">Wrocław</option>
+                                <option value="poz">Poznań</option>
+                                <option value="ktc">Katowice</option>
                             </select>&ensp;<i class="demo-icon icon-location-inv"></i> </div>
-                        <div class="searchcar">
-                            <label for="date-out">
+                            <div class="searchcar">
+                                <label for="date-out">
                                 <p>Collection time:</p>
                                 <input class="choice" type="text" name="date-out" value="dd/mm/yyyy">
                                 <input class="choice-time" type="text" value="hh:mm"><i class="hideicons demo-icon icon-calendar-check-o"></i></label>
-                        </div>
-                        <div class="searchcar">
-                            <label for="date-out">
+                            </div>
+                            <div class="searchcar">
+                                <label for="date-in">
                                 <p>Drop-off time:</p>
-                                <input class="choice" type="text" name="date-out" value="dd/mm/yyyy">
+                                <input class="choice" type="text" name="date-in" value="dd/mm/yyyy">
                                 <input class="choice-time" type="text" value="hh:mm"><i class=" hideicons demo-icon icon-calendar-times-o"></i> </label>
-                        </div>
-                        <div class="searchcar">
-                            <p>Car:</p>
-                            <select class="choice" name="car-out" size="1">
-                                <option value="A">Fiat 500</option>
+                            </div>
+                            <div class="searchcar">
+                                <p>Car:</p>
+                                <select class="choice" name="car-out" size="1">
+                                <option value="Fiat500">Fiat 500</option>
                                 <option>Toyota Yaris</option>
-                                <option value="B">Ford Focus</option>
-                                <option value="C">Opel Astra</option>
-                                <option value="D">Ford Mondeo</option>
-                                <option value="D">Volkswagen Passat</option>
-                                <option value="D">Volvo xc70</option>
-                                <option value="E">Audi A4</option>
-                                <option value="SUV">Kia Sportage</option>
-                                <option value="SUV+">Lexus NX300h</option>
-                                <option value="F">BMW 5 Series</option>
-                                <option value="F">Mercedes-Benz S-class</option>
+                                <option value="FordFocus">Ford Focus</option>
+                                <option value="OpelAstra">Opel Astra</option>
+                                <option value="FordMondeo">Ford Mondeo</option>
+                                <option value="VolkswagenPassat">Volkswagen Passat</option>
+                                <option value="Volvoxc70">Volvo xc70</option>
+                                <option value="AudiA4">Audi A4</option>
+                                <option value="KiaSportage">Kia Sportage</option>
+                                <option value="LexusNX300h">Lexus NX300h</option>
+                                <option value="BMW5Series">BMW 5 Series</option>
+                                <option value="Mercedes-S">Mercedes-Benz S-class</option>
                             </select><i class="demo-icon icon-cab"></i></div>
-                        <div class="searchcar">
-                            <p>Total price:&ensp;<span>---$</span><i class="demo-icon icon-wallet"></i></p>
+                            <div class="searchcar searchcarlast">
+                                <p>Summary &amp; Price:&ensp;</p>
+                                <div id="price">
+                                    <div id="left_sum">
+                                        <p id="city">Kraków</p>
+                                        <p id="totaldays">8 days</p>
+                                        <p id="cartype">Mercedes-Benz S-class</p>
+                                    </div>
+                                    <div id="right_sum">
+                                        <p id="secdriver">a</p>
+                                        <p id="fullins">b</p>
+                                        <p id="crossborder">c</p>
+                                        <p id="gps">a</p>
+                                        <p id="childseat">Full insurance</p>
+                                        <p id="roofrack">c</p>
+                                    </div>
+                                    <div id="down_sum"><span>Total:&emsp;</span><p id="innercost"></p></div>
+                                </div><i class="demo-icon icon-wallet"></i>
+                            </div>
+                            <input class="send" type="submit" value="Confirm">
                         </div>
-                        <input class="send" type="submit" value="Confirm"> </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-6 sec-two">
-                <ul>
-                    <li>
-                        <h5>Add. options<a class="expand" href="#">&or;</a></h5>
-                        <div class="container">
-                            <div class="add">
-                                <input type="checkbox" name="options" value="add-driver" />Second driver&emsp;</div>
-                            <div class="add">
-                                <input type="checkbox" name="options" value="insurance" />Full insurance&emsp;</div>
-                            <div class="add">
-                                <input type="checkbox" name="options" value="border" />Cross border&emsp;</div> <a class="close" href="#">X</a></div>
-                    </li>
-                    <li>
-                        <h5>Accessories<a class="expand" href="#">&or;</a></h5>
-                        <div class="container">
-                            <div class="add">
-                                <input type="checkbox" name="equipment" value="navigation" />Navigation GPS&emsp;</div>
-                            <div class="add">
-                                <input type="checkbox" name="equipment" value="seat" />Child seat&emsp;</div>
-                            <div class="add">
-                                <input type="checkbox" name="equipment" value="rack" />Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
-                    </li>
-                    <li>
-                        <h5>Comments
-                            <a class="expand" href="#">&or;</a>
+                <div class="col-6 sec-two margintop690">
+                    <ul>
+                        <li>
+                            <h5>Add. options<a class="expand" href="#">&or;</a></h5>
+                            <div class="container">
+                                <div class="add">
+                                    <input type="checkbox" name="options" value="add-driver" />Second driver&emsp;</div>
+                                <div class="add">
+                                    <input type="checkbox" name="options" value="insurance" />Full insurance&emsp;</div>
+                                <div class="add">
+                                    <input type="checkbox" name="options" value="border" />Cross border&emsp;</div> <a class="close" href="#">X</a></div>
+                        </li>
+                        <li>
+                            <h5>Accessories<a class="expand" href="#">&or;</a></h5>
+                            <div class="container">
+                                <div class="add">
+                                    <input type="checkbox" name="equipment" value="navigation" />Navigation GPS&emsp;</div>
+                                <div class="add">
+                                    <input type="checkbox" name="equipment" value="seat" />Child seat&emsp;</div>
+                                <div class="add">
+                                    <input type="checkbox" name="equipment" value="rack" />Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
+                        </li>
+                        <li>
+                            <h5>Comments
+                                <a class="expand" href="#">&or;</a>
                             </h5>
-                        <div class="container">
-                            <textarea name="comments" id="textplace"></textarea> <a class="close" href="#">X</a> </div>
-                    </li>
-                </ul>
-            </div>
+                            <div class="container">
+                                <textarea name="comments" id="textplace"></textarea> <a class="close" href="#">X</a> </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
     </section>
     <!--   footer -->
     <footer>
