@@ -33,20 +33,20 @@ $(function () {
 //    
 //    
 //        
-////    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
-////     onSelect: showDays                       });
-////    $(".choice-time").timepicker();
-////    
-////    
-////    function showDays() {
-////    var start = $("[name = 'date-out']").datepicker('getDate');
-////    var end = $("[name = 'date-in']").datepicker('getDate');
-////    if (!start || !end) return;
-////    var days = (end - start) / 1000 / 60 / 60 / 24;
-////       
-////    $('#totaldays').val(days); 
-//    
-//        
+    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
+     onSelect: showDays                       });
+    $(".choice-time").timepicker();
+    
+    
+    function showDays() {
+    var start = $("[name = 'date-out']").datepicker('getDate');
+    var end = $("[name = 'date-in']").datepicker('getDate');
+    if (!start || !end) return;
+    var days = (end - start) / 1000 / 60 / 60 / 24;
+       
+    $('#totaldays').val(days); 
+    }
+        
      var form = document.querySelector('form');
     console.log(form);
     var price = document.querySelector("#innercost");
