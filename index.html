@@ -111,7 +111,7 @@
                         <div id="form">
                             <div class="searchcar">
                                 <p>Pickup location &amp; Dropoff:</p>
-                                <select class="choice" name="citys-out" size="1">
+                                <select class="choice" name="citys-out" size="1" id="cityselect" onchange="myFunction()">
                                 <option value="waw">Warszawa</option>
                                 <option value="krk">Kraków</option>
                                 <option value="gdn">Gdańsk</option>
@@ -133,9 +133,9 @@
                             </div>
                             <div class="searchcar">
                                 <p>Car:</p>
-                                <select class="choice" name="car-out" size="1">
+                                <select class="choice" name="car-out" size="1" id="carselect" onchange="myFunction2()">
                                 <option value="Fiat500">Fiat 500</option>
-                                <option>Toyota Yaris</option>
+                                <option value="Toyota Yaris">Toyota Yaris</option>
                                 <option value="FordFocus">Ford Focus</option>
                                 <option value="OpelAstra">Opel Astra</option>
                                 <option value="FordMondeo">Ford Mondeo</option>
@@ -151,23 +151,24 @@
                                 <p>Summary &amp; Price:&ensp;</p>
                                 <div id="price">
                                     <div id="left_sum">
-                                        <p id="city">Kraków</p>
-                                        <p id="totaldays">8 days</p>
-                                        <p id="cartype">Mercedes-Benz S-class</p>
+                                        <p id="city">&emsp;</p>
+                                        <p id="totaldays">&emsp;p</p>
+                                        <p id="cartype">&emsp;</p>
                                     </div>
                                     <div id="right_sum">
-                                        <p id="secdriver">a</p>
-                                        <p id="fullins">b</p>
-                                        <p id="crossborder">c</p>
-                                        <p id="gps">a</p>
-                                        <p id="childseat">Full insurance</p>
-                                        <p id="roofrack">c</p>
+                                        <p id="secdriver"></p>
+                                        <p id="fullins"></p>
+                                        <p id="crossborder"></p>
+                                        <p id="gps"></p>
+                                        <p id="childseat"></p>
+                                        <p id="roofrack"></p>
                                     </div>
                                     <div id="down_sum"><span>Total:&emsp;</span><p id="innercost"></p></div>
                                 </div><i class="demo-icon icon-wallet"></i>
                             </div>
                             <input class="send" type="submit" value="Confirm">
                         </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-6 sec-two margintop690">
@@ -176,21 +177,21 @@
                             <h5>Add. options<a class="expand" href="#">&or;</a></h5>
                             <div class="container">
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="add-driver" />Second driver&emsp;</div>
+                                    <input type="checkbox" name="options" value="add-driver" onchange="myFunction3(this)" />Second driver&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="insurance" />Full insurance&emsp;</div>
+                                    <input type="checkbox" name="options" value="insurance" onchange="myFunction4(this)"/>Full insurance&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="border" />Cross border&emsp;</div> <a class="close" href="#">X</a></div>
+                                    <input type="checkbox" name="options" value="border" onchange="myFunction5(this)"/>Cross border&emsp;</div> <a class="close" href="#">X</a></div>
                         </li>
                         <li>
                             <h5>Accessories<a class="expand" href="#">&or;</a></h5>
                             <div class="container">
                                 <div class="add">
-                                    <input type="checkbox" name="equipment" value="navigation" />Navigation GPS&emsp;</div>
+                                    <input type="checkbox" name="equipment" value="navigation" onchange="myFunction6(this)" />Navigation GPS&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="equipment" value="seat" />Child seat&emsp;</div>
+                                    <input type="checkbox" name="equipment" value="seat" onchange="myFunction7(this)" />Child seat&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="equipment" value="rack" />Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
+                                    <input type="checkbox" name="equipment" value="rack" onchange="myFunction8(this)"/>Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
                         </li>
                         <li>
                             <h5>Comments
@@ -201,7 +202,7 @@
                         </li>
                     </ul>
                 </div>
-            </form>
+            
         </div>
     </section>
     <!--   footer -->

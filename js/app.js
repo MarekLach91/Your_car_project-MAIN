@@ -25,28 +25,28 @@ $(function () {
         $this.parent().slideUp();
     });
     
-    
-    
-    
-    
-    //    błąd przy chceckboxach 
-    
-    
-        
-    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
-     onSelect: showDays                       });
-    $(".choice-time").timepicker();
-    
-    
-    function showDays() {
-    var start = $("[name = 'date-out']").datepicker('getDate');
-    var end = $("[name = 'date-in']").datepicker('getDate');
-    if (!start || !end) return;
-    var days = (end - start) / 1000 / 60 / 60 / 24;
-       
-    $('#totaldays').val(days); 
-    
-        
+//    
+//    
+//    
+//    
+//    //    błąd przy chceckboxach 
+//    
+//    
+//        
+////    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
+////     onSelect: showDays                       });
+////    $(".choice-time").timepicker();
+////    
+////    
+////    function showDays() {
+////    var start = $("[name = 'date-out']").datepicker('getDate');
+////    var end = $("[name = 'date-in']").datepicker('getDate');
+////    if (!start || !end) return;
+////    var days = (end - start) / 1000 / 60 / 60 / 24;
+////       
+////    $('#totaldays').val(days); 
+//    
+//        
      var form = document.querySelector('form');
     console.log(form);
     var price = document.querySelector("#innercost");
@@ -141,115 +141,183 @@ $(function () {
             price.innerText = days * classF + '$';
             sendForm += 1;
         } 
-        
-
- 
-    
-
 
      });
        
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-   }
-    
-
-    
-
-
-    
-    
-    
-$(".carlink").click(function(event) {
-  event.preventDefault();
-    });
-    
-
-    
-    $("li").click(function(event) {
-  event.preventDefault();
-    });
-
-//form to send
-       
-    
-         
-
-
-    
-        
-//        if (inDate.value - ) {
-//            sendForm = 0;
-//            console.log('fupaaaaaaaa');
-//        } else if (typeCar.selectedIndex == 0) { 
-//            price.innerText = classA + '$/per day';  + '$/per day';
-//            sendForm += 1;
-        
-        
-    
-        
-  
-        
-//        //surname check
-//        if (surnameVal.length > 5) {
-//            sendForm += 1;
-//        } else {
-//            error.innerHTML += 'Nazwisko musi być dluzsze niz 5 znakow!<br>';
-//            sendForm = 0;
-//        }
+   });
+//    
 //
-//        // password check
-//        if (pass1Val === pass2Val) {
-//            sendForm += 1;
-//        } else {
-//            error.innerHTML += 'Hasła się nie zgadzają!<br>';
-//            sendForm = 0;
-//        }
-//
-//        //agree check
-//        if (agreeVal) {
-//            sendForm += 1;
-//        } else {
-//            error.innerHTML += 'Zaznacz regulamin!<br>';
-//            sendForm = 0;
-//        }
-//
-//        if (sendForm >= 4) {
-//
-//            /*
-//            console.log(form.elements);
-//            for (var i = 0; i < form.elements.length-1; i++) {
-//                    console.log(form.elements[i].value);
-//            }
-//            */
-//            //Wersja alternatywna dla wyswietlania danych formularza w konsoli
-//
-//            console.log("Name: " + nameVal, "Surname: " + surnameVal, "pass1: " + pass1Val, "pass2: " + pass2Val, "Agree: " + agreeVal);
+//    
 //
 //
-//            error.innerHTML = ""; //reset error
-//            suc.innerText = "Rejestracja się udała!";
-//        }
-//
+//    
+//    
+//    
+//$(".carlink").click(function(event) {
+//  event.preventDefault();
 //    });
+//    
+//
+//    
+//    $("li").click(function(event) {
+//  event.preventDefault();
+//    });
+//
+////form to send
+//       
+//    
+//         
+//
+//
+//    
+//        
+////        if (inDate.value - ) {
+////            sendForm = 0;
+////            console.log('fupaaaaaaaa');
+////        } else if (typeCar.selectedIndex == 0) { 
+////            price.innerText = classA + '$/per day';  + '$/per day';
+////            sendForm += 1;
+//        
+//        
+//    
+//        
+//  
+//        
+////        //surname check
+////        if (surnameVal.length > 5) {
+////            sendForm += 1;
+////        } else {
+////            error.innerHTML += 'Nazwisko musi być dluzsze niz 5 znakow!<br>';
+////            sendForm = 0;
+////        }
+////
+////        // password check
+////        if (pass1Val === pass2Val) {
+////            sendForm += 1;
+////        } else {
+////            error.innerHTML += 'Hasła się nie zgadzają!<br>';
+////            sendForm = 0;
+////        }
+////
+////        //agree check
+////        if (agreeVal) {
+////            sendForm += 1;
+////        } else {
+////            error.innerHTML += 'Zaznacz regulamin!<br>';
+////            sendForm = 0;
+////        }
+////
+////        if (sendForm >= 4) {
+////
+////            /*
+////            console.log(form.elements);
+////            for (var i = 0; i < form.elements.length-1; i++) {
+////                    console.log(form.elements[i].value);
+////            }
+////            */
+////            //Wersja alternatywna dla wyswietlania danych formularza w konsoli
+////
+////            console.log("Name: " + nameVal, "Surname: " + surnameVal, "pass1: " + pass1Val, "pass2: " + pass2Val, "Agree: " + agreeVal);
+////
+////
+////            error.innerHTML = ""; //reset error
+////            suc.innerText = "Rejestracja się udała!";
+////        }
+////
+////    });
+//
+//    
+//    
+////        var agreeVal = form.elements[4].checked;
+//    
+//    
+//    
+//    
+//    
 
-    
-    
-//        var agreeVal = form.elements[4].checked;
-    
-    
-    
-    
+
+
+function myFunction2(){
+ 
     
    
-});
+    
+    var cartype = document.getElementById("carselect").options[document.getElementById("carselect").selectedIndex].text;
+    console.log(cartype);
+var innercar =  document.getElementById("cartype").innerText ="Car: " + cartype;
+    
+
+}
+
+
+function myFunction(){
+    var citytype = document.getElementById("cityselect").options[document.getElementById("cityselect").selectedIndex].text;
+var innercity =  document.getElementById("city").innerText ="City: " +  citytype;
+};
+
+
+function myFunction3(chk) {
+var targetElement = document.getElementById('secdriver');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Second driver";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
+
+function myFunction4(chk) {
+var targetElement = document.getElementById('fullins');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Full insurance";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
+
+function myFunction5(chk) {
+var targetElement = document.getElementById('crossborder');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Cross Border";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
+
+function myFunction6(chk) {
+var targetElement = document.getElementById('gps');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Navigation GPS";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
+function myFunction7(chk) {
+var targetElement = document.getElementById('childseat');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Child seat";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
+function myFunction8(chk) {
+var targetElement = document.getElementById('roofrack');
+console.log(targetElement)
+  if (chk.checked){
+     targetElement.innerHTML= "Roof rack";
+  }
+  else{
+    targetElement.innerHTML=" "
+  }
+}
