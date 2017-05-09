@@ -1,8 +1,24 @@
 $(function () {
     
-    
-    
     console.log('DOM!');
+    
+    
+    // show/hide menu
+    
+    var menu = document.querySelector(".icon-menu");
+    var decoration = document.querySelector(".icon-menu");
+    var list_menu = document.querySelector(".open_hamburger");
+    
+    menu.addEventListener('click', function () {
+    list_menu.classList.toggle("show");
+    menu.classList.toggle("icon-menu-hover");    
+    });
+    
+
+    
+    // slide list
+    
+    
     var $menu = $('.show-hide-menu');
     var $hidelist = $menu.find('.list');
     $menu.on('click', function (event) {
@@ -25,21 +41,11 @@ $(function () {
         $this.parent().slideUp();
     });
     
-//    
-//    
-//    
-//    
-//    //    błąd przy chceckboxach 
-//    
-//    
-//        
-    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
-     onSelect: showDays,
-     minDate: 0,
-                            });
-    $(".choice-time").timepicker();
-    
-    
+
+
+
+     
+ 
 
         
      var form = document.querySelector('form');
@@ -75,6 +81,9 @@ $(function () {
         var typeCar = form.elements[5].options;
     
         
+        
+        
+        
 //        PRICE FOR CAR
         var classA = 20;
         var classB = 25;
@@ -92,16 +101,19 @@ $(function () {
         
         
         var sendForm = 0;
-        price.innerText = ""; //info about cost   
-//    function showDays(){
-//    var start = $("[name = 'date-out']").datepicker('getDate');
-//    var end = $("[name = 'date-in']").datepicker('getDate');
-//    if (!start || !end) return;
-//        
-//    var days = (end - start) / 1000 / 60 / 60 / 24;
-//                
-//    };   
-//        showDays()
+    price.innerText = ""; //info about cost   
+        
+        
+        
+    function showDays(){
+    var start = $("[name = 'date-out']").datepicker('getDate');
+    var end = $("[name = 'date-in']").datepicker('getDate');
+    if (!start || !end) return;
+        
+    var days = (end - start) / 1000 / 60 / 60 / 24;
+                
+    };   
+        showDays()
         
         
         
@@ -163,8 +175,33 @@ $(function () {
 $(".carlink").click(function(event) {
   event.preventDefault();
     });
+
+ 
+    
+   });
+
+
+// inputs
+
+function select_city(){
+    var citytype = document.getElementById("cityselect").options[document.getElementById("cityselect").selectedIndex].text;
+var innercity =  document.getElementById("city").innerText ="City: " +  citytype;
+}
+
+
+    // calender picker
     
     
+    $(".choice").datepicker({dateFormat: 'dd/mm/yy',
+     onSelect: showDays,
+     minDate: 0,
+                            });
+    $(".choice-time").timepicker();
+        
+       
+    // to blokuje checkboxy
+   // calculate days
+     
       function showDays(){
     var $start = $("[name = 'date-out']").datepicker('getDate');
     var $end = $("[name = 'date-in']").datepicker('getDate');  
@@ -173,15 +210,9 @@ $(".carlink").click(function(event) {
     $('#totaldays').text('Day/s: '+ $days); 
    };
 
-    
- 
-    
-   });
-
-
 
     
-       function myFunction2(){
+function select_car(){
  
     var cartype = document.getElementById("carselect").options[document.getElementById("carselect").selectedIndex].text;
     console.log(cartype);
@@ -189,14 +220,10 @@ var innercar =  document.getElementById("cartype").innerText ="Car: " + cartype;
        }
 
 
-
-function myFunction(){
-    var citytype = document.getElementById("cityselect").options[document.getElementById("cityselect").selectedIndex].text;
-var innercity =  document.getElementById("city").innerText ="City: " +  citytype;
-}
+// checkbox
 
 
-function myFunction3(chk) {
+function add_driver(chk) {
 var targetElement = document.getElementById('secdriver');
 console.log(targetElement)
   if (chk.checked){
@@ -207,7 +234,7 @@ console.log(targetElement)
   }
 }
 
-function myFunction4(chk) {
+function add_insur(chk) {
 var targetElement = document.getElementById('fullins');
 console.log(targetElement)
   if (chk.checked){
@@ -218,7 +245,7 @@ console.log(targetElement)
   }
 }
 
-function myFunction5(chk) {
+function add_border(chk) {
 var targetElement = document.getElementById('crossborder');
 console.log(targetElement)
   if (chk.checked){
@@ -229,7 +256,7 @@ console.log(targetElement)
   }
 }
 
-function myFunction6(chk) {
+function add_gps(chk) {
 var targetElement = document.getElementById('gps');
 console.log(targetElement)
   if (chk.checked){
@@ -239,7 +266,7 @@ console.log(targetElement)
     targetElement.innerHTML=" "
   }
 }
-function myFunction7(chk) {
+function add_seat(chk) {
 var targetElement = document.getElementById('childseat');
 console.log(targetElement)
   if (chk.checked){
@@ -249,7 +276,7 @@ console.log(targetElement)
     targetElement.innerHTML=" "
   }
 }
-function myFunction8(chk) {
+function add_rack(chk) {
 var targetElement = document.getElementById('roofrack');
 console.log(targetElement)
   if (chk.checked){

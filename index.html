@@ -23,7 +23,15 @@
                 </div>
             </div>
             <div class="col-9 right_top">
-                <div class="show-hide-menu"><i class="demo-icon icon-menu"></i></div>
+                <div class="show-hide-menu"><i class="demo-icon icon-menu">
+                    <ul class="open_hamburger">
+                    <li><a href="#">About us.</a></li>
+                    <li><a href="#">Oferts.</a></li>
+                    <li><a href="#">Location.</a></li>
+                    <li><a href="#">Fleet.</a></li>
+                    <li><a href="#">Contact.</a></li>
+                </ul>    
+                </i></div>
                 <ul class="list toplist">
                     <li><a class="menu-top" href="#">About us.</a></li>
                     <li><a class="menu-top" href="#">Oferts.</a></li>
@@ -111,7 +119,7 @@
                         <div id="form">
                             <div class="searchcar">
                                 <p>Pickup location &amp; Dropoff:</p>
-                                <select class="choice" name="citys-out" size="1" id="cityselect" onchange="myFunction()">
+                                <select class="choice" name="citys-out" size="1" id="cityselect" onchange="select_city()">
                                 <option value="waw">Warszawa</option>
                                 <option value="krk">Kraków</option>
                                 <option value="gdn">Gdańsk</option>
@@ -133,7 +141,7 @@
                             </div>
                             <div class="searchcar">
                                 <p>Car:</p>
-                                <select class="choice" name="car-out" size="1" id="carselect" onchange="myFunction2()">
+                                <select class="choice" name="car-out" size="1" id="carselect" onchange="select_car()">
                                 <option value="Fiat500">Fiat 500</option>
                                 <option value="Toyota Yaris">Toyota Yaris</option>
                                 <option value="FordFocus">Ford Focus</option>
@@ -176,21 +184,21 @@
                             <h5>Add. options<a class="expand" href="#">&or;</a></h5>
                             <div class="container">
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="add-driver" onchange="myFunction3(this)" />Second driver&emsp;</div>
+                                    <input type="checkbox" name="options" value="add-driver" onchange="add_driver(this)" />Second driver&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="insurance" onchange="myFunction4(this)"/>Full insurance&emsp;</div>
+                                    <input type="checkbox" name="options" value="insurance" onchange="add_insur(this)"/>Full insurance&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="options" value="border" onchange="myFunction5(this)"/>Cross border&emsp;</div> <a class="close" href="#">X</a></div>
+                                    <input type="checkbox" name="options" value="border" onchange="add_border(this)"/>Cross border&emsp;</div> <a class="close" href="#">X</a></div>
                         </li>
                         <li>
                             <h5>Accessories<a class="expand" href="#">&or;</a></h5>
                             <div class="container">
                                 <div class="add">
-                                    <input type="checkbox" name="equipment" value="navigation" onchange="myFunction6(this)" />Navigation GPS&emsp;</div>
+                                    <input type="checkbox" name="equipment" value="navigation" onchange="add_gps(this)" />Navigation GPS&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" name="equipment" value="seat" onchange="myFunction7(this)" />Child seat&emsp;</div>
+                                    <input type="checkbox" name="equipment" value="seat" onchange="add_seat(this)" />Child seat&emsp;</div>
                                 <div class="add">
-                                    <input type="checkbox" disabled="false" name="equipment" value="rack" onchange="myFunction8(this)"/>Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
+                                    <input type="checkbox" name="equipment" value="rack" onchange="add_rack(this)"/>Roof rack&emsp;</div> <a class="close" href="#">X</a> </div>
                         </li>
                         <li>
                             <h5>Comments

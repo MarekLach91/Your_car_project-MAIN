@@ -79,6 +79,48 @@ a {
     z-index: 100;
 }
 
+.open_hamburger {
+  display: none;
+  position: absolute;
+  border-top: 1px solid white;
+  width: 100vw;
+  height: 210px;
+  top: 95px;
+  right: 0;
+  background-color: #CBC6C3;
+  padding: 7px 0 10px 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s height;
+    
+}
+
+.show {
+    display: block; 
+}
+
+.open_hamburger li{
+  text-align: center;
+  font-size: 18px;
+  margin-left: 30px;
+  padding: 0;
+  font-weight: normal;
+  line-height: 40px;
+  display: block;
+
+  }
+
+.open_hamburger li:hover {
+    background-color: lightblue;
+}
+
+
+
+
+
+
+
 #top_logo {
     background-image: url(../images/logo-top.png);
     background-size: contain;
@@ -115,7 +157,7 @@ a {
     cursor: pointer;
 }
 
-.icon-menu:hover {
+.icon-menu-hover {
     color: dodgerblue;
     font-weight: bold;
     border-radius: 100px;
@@ -338,7 +380,6 @@ h4 {
 .demo-icon {
     font-size: 2.6em;
     float: right;
-    border-right: 2px;
 }
 
 @media (min-width: 690px) and (max-width: 810px) {
