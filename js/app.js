@@ -172,9 +172,9 @@ $(function () {
 //  event.preventDefault();
 //    });
 //
-//$(".carlink").click(function(event) {
-//  event.preventDefault();
-//    });
+$(".carlink").click(function(event) {
+  event.preventDefault();
+    });
 
  
     
