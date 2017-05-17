@@ -44,7 +44,7 @@ $(function () {
 
 
 
-     
+});
  
 
         
@@ -105,15 +105,15 @@ $(function () {
         
         
         
-    function showDays(){
-    var start = $("[name = 'date-out']").datepicker('getDate');
-    var end = $("[name = 'date-in']").datepicker('getDate');
-    if (!start || !end) return;
-        
-    var days = (end - start) / 1000 / 60 / 60 / 24;
-                
-    };   
-        showDays()
+//    function showDays(){
+//    var start = $("[name = 'date-out']").datepicker('getDate');
+//    var end = $("[name = 'date-in']").datepicker('getDate');
+//    if (!start || !end) return;
+//        
+//    var days = (end - start) / 1000 / 60 / 60 / 24;
+//                
+//    };   
+//        showDays()
         
         
         
@@ -168,17 +168,17 @@ $(function () {
 
 //PREVENT
 
-    $("li").click(function(event) {
-  event.preventDefault();
-    });
-
-$(".carlink").click(function(event) {
-  event.preventDefault();
-    });
+//    $("li").click(function(event) {
+//  event.preventDefault();
+//    });
+//
+//$(".carlink").click(function(event) {
+//  event.preventDefault();
+//    });
 
  
     
-   });
+//   });
 
 
 // inputs
@@ -189,7 +189,7 @@ var innercity =  document.getElementById("city").innerText ="City: " +  citytype
 }
 
 
-    // calender picker
+//     calender picker
     
     
     $(".choice").datepicker({dateFormat: 'dd/mm/yy',
@@ -199,8 +199,8 @@ var innercity =  document.getElementById("city").innerText ="City: " +  citytype
     $(".choice-time").timepicker();
         
        
-    // to blokuje checkboxy
-   // calculate days
+//     to blokuje checkboxy
+//    calculate days
      
       function showDays(){
     var $start = $("[name = 'date-out']").datepicker('getDate');
