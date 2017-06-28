@@ -206,7 +206,7 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #add8e6;
+    background-color: white;
 }
 
 #allcars {
@@ -219,7 +219,6 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     height: 220px;
-    border: 10px solid lightblue;
     background-color: white;
     position: relative;
 }
@@ -301,16 +300,10 @@ a {
 
 //section two
 #two {
-    background: rgba(73, 155, 234, 1);
-    background: -moz-linear-gradient(-45deg, rgba(73, 155, 234, 1) 0%, rgba(73, 155, 234, 1) 55%, rgba(32, 124, 229, 1) 73%, rgba(32, 124, 229, 1) 81%, rgba(32, 124, 229, 1) 84%, rgba(32, 124, 229, 1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(73, 155, 234, 1)), color-stop(55%, rgba(73, 155, 234, 1)), color-stop(73%, rgba(32, 124, 229, 1)), color-stop(81%, rgba(32, 124, 229, 1)), color-stop(84%, rgba(32, 124, 229, 1)), color-stop(100%, rgba(32, 124, 229, 1)));
-    background: -webkit-linear-gradient(-45deg, rgba(73, 155, 234, 1) 0%, rgba(73, 155, 234, 1) 55%, rgba(32, 124, 229, 1) 73%, rgba(32, 124, 229, 1) 81%, rgba(32, 124, 229, 1) 84%, rgba(32, 124, 229, 1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(73, 155, 234, 1) 0%, rgba(73, 155, 234, 1) 55%, rgba(32, 124, 229, 1) 73%, rgba(32, 124, 229, 1) 81%, rgba(32, 124, 229, 1) 84%, rgba(32, 124, 229, 1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(73, 155, 234, 1) 0%, rgba(73, 155, 234, 1) 55%, rgba(32, 124, 229, 1) 73%, rgba(32, 124, 229, 1) 81%, rgba(32, 124, 229, 1) 84%, rgba(32, 124, 229, 1) 100%);
-    background: linear-gradient(135deg, rgba(73, 155, 234, 1) 0%, rgba(73, 155, 234, 1) 55%, rgba(32, 124, 229, 1) 73%, rgba(32, 124, 229, 1) 81%, rgba(32, 124, 229, 1) 84%, rgba(32, 124, 229, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1);
     height: auto;
+    background-size: cover;
     min-height: 800px;
+    background-image: url(../images/mountain-road-1556177_1920.png);
 }
 
 .sec-two-top {
@@ -509,7 +502,7 @@ input {
 .send {
     margin-top: 10px;
     float: right;
-    background-color: darkblue;
+    background-color: cornflowerblue;
     color: white;
     border-radius: 100px;
     width: 150px;
